@@ -7,9 +7,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+
   <title>Frontend Mentor | Insure landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
   
   <style>
@@ -20,223 +29,180 @@
       max-width: 1440px;
     }
 
-    .nav_bar{
-      position: fixed;
-      display: flex;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100px;
-      background-color: white;
-
-      z-index: 100;
+    p{
+        font-family: 'Karla';
+    }
+    h1{
+        font-family: 'DM Serif Display';
     }
 
-    .nav_content{
-      display: flex;
-      gap: 1rem;
-      margin-left: 60%;
-      margin-top: 1rem;
-      align-items: center;
+
+    .nav-hover{
+        color: hsl(273, 4%, 51%);
+    }
+    .nav-hover:hover {
+        color: black;
+    }
+    .bottom-button-hover{
+        padding: 0;
+        color: black;
+    }
+    .bottom-button-hover:hover{
+        text-decoration: underline;
     }
 
-    .nav_logo{
-      position: absolute;
-      height: 20px;
-      margin-left: 15rem;
-      margin-top: 3rem;
-    }
 
-    .buttons{
-      display: flex;
-      gap: 1rem;
-      column-gap: 2.5;
-    }
-
-    .buttons button{
-      background: transparent;
-      border: none;
-      color: hsl(273, 4%, 51%);
-      font-size: 25px;
-      white-space: nowrap;
-      
-    }
-    .view_button{
-      background: transparent;
-      color: black;
-      font-size: 25px;
-
-      border: 2px solid black;
-      border-radius: 0;
-      padding: 0.5rem 2.5rem;
-      white-space: nowrap;
-    }
-
-    .purple_block{
-      height: 750px;
-      background-color: hsl(256, 26%, 20%);
-      margin-top: 80px;
-      width: 100%;
-
-      padding-left: 15rem;
-      padding-top: 5rem;
-      padding-bottom: 2rem;
-      padding-right: 2rem;
-    }
-
-    .horz_bar{
-      width: 150px;
-      height: 2px;
-      background-color: white;
-      margin-bottom: 4rem;
-      margin-top: 3rem;
-    }
-
-    .text1{
-      color: white;
-      font-family: "Karla";
-      font-size: 120px;
-      line-height: 0.8;
-      font-weight: 400;
-    }
-
-    .text2{
-      color: white;
-      font-size: 25px;
-      line-height: 1.6;
-      margin-top: 2rem;
-    }
-
-    .view_button2{
-      margin-top: 3rem;
-      background: transparent;
-      color: white;
-      font-size: 25px;
-
-      border: 2px solid white;
-      border-radius: 0;
-      padding: 0.5rem 2.5rem;
-      white-space: nowrap;
-    }
-
-    .intro_image{
-      position: absolute;
-      top: 200px;
-      right: 200px;
-      width: 600px;
-      height: auto;
-    }
-
-    .pattern-intro-right{
-      position: absolute;
-      top: 80px;
-      right: 0;
-      width: 450px;
-      z-index: 90;
-    }
 
   </style>
 </head>
 <body>
-  <div class="nav_bar">
-    <img src="images/logo.svg" class="nav_logo"/>
-    <div class="nav_content">
-      <div class="buttons">
-      <button>HOW WE WORK</button>
-      <button>BLOG</button>
-      <button>ACCOUNT</button>
+<!--Nav-->
+<nav class="navbar navbar-expand-lg bg-white pt-3 sticky-top" style="height: 80px">
+    <div class="d-flex w-100">
+        <img src="images/logo.svg" class= "align-self-center" height="30" style="margin-left: 12%;">
+        <ul class="navbar-nav d-flex gap-3" style="margin-left: 40%;">
+            <li class="nav-item">
+                <a class="btn nav-hover" style="font-family: 'Karla';">HOW WE WORK</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn nav-hover" style="font-family: 'Karla';">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn nav-hover" style="font-family: 'Karla';">ACCOUNT</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-dark" style="width: 10rem; border-radius: 0; border-width: 2px; font-family: 'Karla';">VIEW PLANS</a>
+            </li>
+        </ul>
     </div>
-    <button class="view_button">VIEW PLANS</button>
+</nav>
+<!--Purple-->
+<div style="background-color: hsl(256, 26%, 20%); width: 100%; height: 75vh; margin-top: 0px; position: relative;">
+    <!--Main Image-->
+    <img src="images/image-intro-desktop.jpg" height="auto" style="margin-left: 53%; margin-top: 10vh; width: 35%; position: absolute;">
+    <div style="background-color: white; height: 1px; width: 11%; margin-left: 12%; margin-top: 10vh; position: absolute;"></div>
+    <h1 style="color: white; margin-left: 12%; margin-top: 18vh; position: absolute; font-size: 5vw; line-height: 0.85;">
+        Humanizing<br>your insurance.
+    </h1>
+    <p style="color: white; margin-left: 12%; margin-top: 40vh; position: absolute; font-size: 1.15vw; line-height: 1.5;">
+        Get your life insurance coverage easier and faster. We blend our expertise<br> 
+        and technology to help you find the plan that’s right for you. Ensure you<br> 
+        and your loved ones are protected.
+    </p>
+    <a class="btn btn-outline-light" style="font-family: 'Karla'; width: 12rem; border-radius: 0; border-width: 2px; margin-left: 12%; margin-top: 55vh; position: absolute; font-size: 1.125vw;">VIEW PLANS</a>
+    <!--Patterns-->
+    <img src="images/bg-pattern-intro-left-desktop.svg" style="margin-top: 24vw; height: auto; width: 13%;">
+    <img src="images/bg-pattern-intro-right-desktop.svg" style="margin-top: -3.5vw; height: auto; width: 28%; right: 0; position: absolute; z-index: 10;">
+    
+    <div style="background-color: hsl(256, 26%, 20%); height: 1px; width: 11%; margin-left: 12%; top: 115vh; position: absolute;"></div>
+</div>
+
+<!--Below Intro-->
+<div style="margin-top: 47vh; margin-left: 12%;">
+    <h1 style="font-size: 5vw;">We're different</h1>
+
+    <!--Proccess,Prices,People-->
+    <div style="margin-right: 12%; display: flex; justify-content: space-between; margin-top: 10vh;">
+        <div>
+            <img src="images/icon-snappy-process.svg" style="width: 6.5vw; height: auto;">
+            <h1 style="margin-top: 5vh">Snappy Process</h1>
+            <p style="margin-top: 2.25vh; color: hsl(273, 4%, 51%); line-height: 1.75; font-size: 1.125vw;">
+                Our application process can be completed in<br>
+                minutes, not hours. Don’t get stuck filling in<br>
+                tedious forms.
+            </p>
+        </div>
+        <div>
+            <img src="images/icon-affordable-prices.svg" style="width: 6.5vw; height: auto;">
+            <h1 style="margin-top: 5vh">Affordable Prices</h1>
+            <p style="margin-top: 2.25vh; color: hsl(273, 4%, 51%); line-height: 1.75; font-size: 1.125vw;">
+                We don’t want you worrying about high monthly<br>
+                costs. Our prices may be low, but we still offer<br>
+                the best coverage possible.
+            </p>
+        </div>
+        <div>
+            <img src="images/icon-people-first.svg" style="width: 6.5vw; height: auto;">
+            <h1 style="margin-top: 5vh">People First</h1>
+            <p style="margin-top: 2.25vh; color: hsl(273, 4%, 51%); line-height: 1.75; font-size: 1.125vw;">
+                Our plans aren’t full of conditions and clauses<br>
+                to prevent payouts. We make sure you’re<br>
+                covered when you need it.
+            </p>
+        </div>
     </div>
-  </div>
-  <div class="purple_block">
-    <div class="horz_bar"></div>
-    <div class="text1">
-      Humaninzing 
-      <br>your insurance.
+</div>
+
+<!--How We Work-->
+<div style="margin-top: 20vh; margin-left: 12%; background-color: hsl(256, 26%, 20%); width: 76%; height: 30vh; display: flex; align-items: center;">
+    <h1 style="color: white; margin-left: 6%; font-size: 3vw;">
+        Find out more<br>
+        about how we work
+    </h1>
+    <a class="btn btn-outline-light" style="z-index: 6; width: 10vw; border-radius: 0; border-width: 2px; font-family: 'Karla'; margin-left: 40%; font-size: 1.125vw;">HOW WE WORK</a>
+    <img src="images/bg-pattern-how-we-work-desktop.svg" style="z-index: 5; position: absolute; right: 12%; height: 30vh; width: 26vw;">
+</div>
+
+<!--Logo and Icons-->
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 25vh; margin-bottom: 6vh; padding-left: 12%; padding-right: 12%;">
+    <img src="images/logo.svg" class= "align-self-center" height="30">
+
+    <div style="display: flex; gap: 1.5vw;">
+        <img src="images/icon-facebook.svg" class= "align-self-center" height="30">
+        <img src="images/icon-twitter.svg" class= "align-self-center" height="30">
+        <img src="images/icon-pinterest.svg" class= "align-self-center" height="30">
+        <img src="images/icon-instagram.svg" class= "align-self-center" height="30">
     </div>
-    <div class="text2">
-      Get your life insurance coverage easier and faster. We blend our expertise<br> 
-      and technology to help you find the plan that’s right for you. Ensure you<br> 
-      and your loved ones are protected.
+</div>
+
+<div style="background-color: hsl(273, 4%, 51%); height: 1px; width: 76%; margin-left: 12%;"></div>
+
+<!--Footer-->
+<div style="margin-left: 12%; margin-top: 5vh; margin-bottom: 4vh; display: flex; gap: 13vw;">
+
+    <!--OUR COMPANY-->
+    <div>
+      <p style="color: hsl(273, 4%, 51%)">OUR COMPANY<p>
+      <ul style="list-style: none; padding: 0; line-height: 3vh;">
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">HOW WE WORK</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">WHY INSURE?</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">VIEW PLANS</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">REVIEWS</a></li>
+      </ul>
     </div>
-    <button class="view_button2">VIEW PLANS</button>
-    <img src="images/image-intro-desktop.jpg" class="intro_image"/>
-    <img src="images/bg-pattern-intro-right-desktop.svg" class="pattern-intro-right"/>
-  </div>
 
+    <!--HELP ME-->
+    <div>
+      <p style="color: hsl(273, 4%, 51%)">HELP ME<p>
+      <ul style="list-style: none; padding: 0; line-height: 3vh;">
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">FAQ</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">TERMS OF USE</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">PRIVACY POLICY</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">COOKIES</a></li>
+      </ul>
+    </div>
 
+    <!--CONTACT-->
+    <div>
+      <p style="color: hsl(273, 4%, 51%)">CONTACT<p>
+      <ul style="list-style: none; padding: 0; line-height: 3vh;">
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">SALES</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">SUPPORT</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">LIVE CHAT</a></li>
+      </ul>
+    </div>
 
+    <!--OTHERS-->
+    <div>
+      <p style="color: hsl(273, 4%, 51%)">OTHERS<p>
+      <ul style="list-style: none; padding: 0; line-height: 3vh;">
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">CAREERS</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">PRESS</a></li>
+        <li><a class="btn bottom-button-hover" style="font-family: 'Karla';">LICENSES</a></li>
+      </ul>
+    </div>
 
+</div>
 
-
-
-
-  <!--
-  How we work
-  Blog
-  Account
-  View plans
-
-  Humanizing your insurance.
-
-  
-
-  View plans
-
-  We’re different
-
-  Snappy Process
-
-  Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
-
-  Affordable Prices
-
-  We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
-
-  People First
-
-  Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
-
-  Find out more about how we work
-
-  How we work
-
-  Our company
-
-  How we work
-  Why Insure?
-  View plans
-  Reviews
-
-  Help me
-
-  FAQ
-  Terms of use
-  Privacy policy
-  Cookies
-
-  Contact
-
-  Sales
-  Support
-  Live chat
-
-  Others
-
-  Careers
-  Press
-  Licenses
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
-
--->
